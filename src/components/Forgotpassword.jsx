@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ' ../css/signin.css';
+import '../css/ForgotPassword.css'; 
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState("");
@@ -9,16 +9,14 @@ const ForgotPassword = () => {
     const handleReset = (e) => {
         e.preventDefault();
         console.log("Reset link sent to:", email);
-        // Add your API call here
+        // Your API call logic goes here
     };
 
     return (
-        <div className="forgot-page">
-            <h1 className="header-title">Password reset</h1>
-            
-            <form className="form-card" onSubmit={handleReset}>
+        <div className="forgot-page-container" style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
+            <form className="form" onSubmit={handleReset}>
                 <div className="flex-column">
-                    <label>Email address of your account*</label>
+                    <label className='text-dark'>Email address of your account*</label>
                 </div>
                 <div className="inputForm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20">
@@ -36,11 +34,12 @@ const ForgotPassword = () => {
                     />
                 </div>
 
-                <button className="button-reset">Reset</button>
+                <button type="submit" className="button-submit">Reset Password</button>
                 
-                <div className="cancel-link" onClick={() => navigate("/login")}>
-                    Cancel
-                </div>
+                <p className="p">
+                    Remember your password? 
+                    <span className="span" onClick={() => navigate("/signin")}> Sign In</span>
+                </p>
             </form>
         </div>
     );

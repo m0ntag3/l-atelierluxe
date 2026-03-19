@@ -64,7 +64,7 @@ const Signup = () => {
 
                 {/* Username Field */}
                 <div className="flex-column">
-                    <label>Username</label>
+                    <label className='text-dark'>Username</label>
                 </div>
                 <div className="inputForm">
                     <input 
@@ -79,7 +79,7 @@ const Signup = () => {
 
                 {/* Email Field */}
                 <div className="flex-column">
-                    <label>Email</label>
+                    <label className='text-dark'>Email</label>
                 </div>
                 <div className="inputForm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20">
@@ -97,7 +97,7 @@ const Signup = () => {
 
                 {/* Password Field */}
                 <div className="flex-column">
-                    <label>Password</label>
+                    <label className='text-dark'>Password</label>
                 </div>
                 <div className="inputForm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">
@@ -116,7 +116,7 @@ const Signup = () => {
 
                 {/* Phone Field */}
                 <div className="flex-column">
-                    <label>Phone Number</label>
+                    <label className='text-dark'>Phone Number</label>
                 </div>
                 <div className="inputForm">
                     <input 

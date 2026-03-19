@@ -32,7 +32,7 @@ const Getproducts = () => {
     }, []);
 
     return (
-        <div className='container-fluid px-4 py-5' style={{ backgroundColor: '#faf9f6', minHeight: '100vh' }}>
+        <div className='container-fluid px-4 py-5' style={{ backgroundColor: '#95A5A6', minHeight: '100vh' }}>
             
             {/* Header Section */}
             <div className="text-center mb-5">
@@ -59,7 +59,7 @@ const Getproducts = () => {
                 </div>
             )}
 
-            {/* Product Grid */}
+            
             <div className="row g-4">
                 {!loading && products.map((product) => (
                     <div className="col-lg-3 col-md-6 mb-4" key={product.id}>
@@ -83,7 +83,7 @@ const Getproducts = () => {
                                     {product.product_name || "Unnamed Piece"}
                                 </h6>
 
-                                <p className="text-light small mb-3">
+                                <p className="text-light small mb-3" id='des'>
                                     {product.product_description?.slice(0, 70) || "No description available..."}...
                                 </p> 
 
@@ -94,6 +94,7 @@ const Getproducts = () => {
 
                                     <button 
                                         className="btn btn-dark w-100 rounded-0 py-2 text-uppercase" 
+                                        id='price'
                                         style={{ fontSize: '0.75rem', letterSpacing: '2px', backgroundColor: '#1a1a1a' }}
                                         onClick={() => navigate("/makepayment", { state: { product } })}
                                     >

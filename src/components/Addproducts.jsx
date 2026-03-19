@@ -62,7 +62,7 @@ const Addproducts = () => {
 
                 {/* Product Name */}
                 <div className="flex-column">
-                    <label>Creation Name</label>
+                    <label className='text-dark'>Creation Name</label>
                 </div>
                 <div className="inputForm">
                     <input 
@@ -77,7 +77,7 @@ const Addproducts = () => {
 
                 {/* Product Description */}
                 <div className="flex-column">
-                    <label>Description</label>
+                    <label className='text-dark'>Description</label>
                 </div>
                 <div className="inputForm">
                     <input 
@@ -92,7 +92,7 @@ const Addproducts = () => {
 
                 {/* Product Cost */}
                 <div className="flex-column">
-                    <label>Price (Ksh)</label>
+                    <label className='text-dark'>Price (Ksh)</label>
                 </div>
                 <div className="inputForm">
                     <input 
@@ -107,7 +107,7 @@ const Addproducts = () => {
 
                 {/* Product Photo */}
                 <div className="flex-column">
-                    <label>Creation Photo</label>
+                    <label className='text-dark'>Creation Photo</label>
                 </div>
                 <div className="inputForm" style={{ paddingRight: '10px' }}>
                     <input 

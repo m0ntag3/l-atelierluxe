@@ -17,14 +17,14 @@ import Forgotpassword from './components/Forgotpassword';
 function App() {
   return (
     <Router>
-      <div className="App min-h-screen bg-[#0f0f12]">
+      <div className="App min-h-screen" id='entire'>
         
         {/* Header Section */}
-        <header className="pt-5 pb-2" id='head'>
+        <header className="pt-1 pb-2" id='head'>
           <div className="div h-[10em] w-full max-w-[50rem] bg-[#1a1a1e] m-auto rounded-[1.5em] relative group p-6 z-0 overflow-hidden shadow-sm border border-white/5" id='head'>
             {/* ... (Keep your animated circles here) ... */}
-            <h1 className="z-20 font-bold text-dark">L'ATELIER LUXE</h1>
-            <b className="z-20 text-white/70 italic">Where both Quality and Professionals concatenate.</b>
+            <h1 className="z-20 font-bold text-dark" id='title'>L'ATELIER LUXE</h1>
+            <b className="z-20 text-white/70 italic" id='state'>Where both Quality and Professionals concatenate.</b>
           </div>
         </header>
 
@@ -37,6 +37,7 @@ function App() {
             <Route path='/' element={<Getproducts />} />
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
+            <Route path="/forgotpassword" element={<Forgotpassword />} />
             <Route path='/forgot' element= {<Forgotpassword/>}/>
             <Route path='/addproducts' element={<Addproducts />} />
             <Route path='/makepayment' element={<Makepayment />} />

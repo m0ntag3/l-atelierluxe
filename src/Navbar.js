@@ -5,7 +5,7 @@ import './css/Navbar.css'; // Assuming you save the CSS here
 const Navbar = () => {
 return (
     <div className="d-flex justify-content-center my-4">
-    <div className="button-container">
+    <div className="button-container" id='Nav'>
         {/* Home Link */}
         <Link to="/" className="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" fill="currentColor" className="icon">
@@ -14,7 +14,7 @@ return (
         </Link>
 
         {/* Register Link (Search Icon) */}
-        <Link to="/signup" className="button">
+        <Link to="/" className="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="icon">
             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" strokeLinejoin="round" strokeLinecap="round"></path>
         </svg>
