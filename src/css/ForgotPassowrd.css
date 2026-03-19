@@ -1,0 +1,95 @@
+/* Container to match the pink header background in the image */
+.forgot-page {
+    background-color: #e95295; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-title {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* The White Card */
+.form-card {
+    background-color: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-column label {
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Input Styling */
+.inputForm {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.inputForm:focus-within {
+    border-color: #e95295;
+}
+
+.input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    background: none;
+}
+
+.inputForm svg {
+    fill: #495057;
+}
+
+/* The Main Pink Button */
+.button-reset {
+    background-color: #e95295;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center; /* Centers the button as per your image */
+    transition: transform 0.2s, background-color 0.2s;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(233, 82, 149, 0.2);
+}
+
+.button-reset:hover {
+    background-color: #d64183;
+    transform: translateY(-1px);
+}
+
+/* Cancel Link */
+.cancel-link {
+    text-align: center;
+    color: #0056b3;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.cancel-link:hover {
+    color: #003d80;
+}

@@ -1,0 +1,107 @@
+/* Signin.css */
+.form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Adjusted for a smoother red/orange */
+padding: 30px;
+width: 100%;
+max-width: 450px;
+border-radius: 20px;
+font-family: sans-serif;
+transition: background 0.3s ease;
+}
+
+.form:hover {
+background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+
+.flex-column > label {
+color: #151717;
+font-weight: 600;
+}
+
+.inputForm {
+border: 1.5px solid #ecedec;
+border-radius: 10em;
+height: 50px;
+display: flex;
+align-items: center;
+padding-left: 15px;
+transition: 0.2s ease-in-out;
+background-color: white;
+}
+
+.input {
+margin-left: 10px;
+border-radius: 10rem;
+border: none;
+width: 100%;
+height: 100%;
+background: transparent;
+}
+
+.input:focus {
+outline: none;
+}
+
+.inputForm:focus-within {
+border: 1.5px solid #2d79f3;
+}
+
+.flex-row {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 10px;
+justify-content: space-between;
+}
+
+.span {
+font-size: 14px;
+color: white;
+font-weight: 500;
+cursor: pointer;
+}
+
+.button-submit {
+padding: 10px 30px;
+background: transparent;
+border: 2px solid white;
+border-radius: 10em;
+color: white;
+font-size: 15px;
+font-weight: 500;
+height: 50px;
+width: 100%;
+cursor: pointer;
+transition: 0.3s;
+margin-top: 10px;
+}
+
+.button-submit:hover {
+background: white;
+color: #ff416c;
+}
+
+.p {
+text-align: center;
+color: #1a1a1a;
+font-size: 14px;
+margin: 5px 0;
+}
+
+.btn {
+width: 100%;
+height: 50px;
+border-radius: 10em;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 500;
+gap: 10px;
+border: 1px solid #ededef;
+background-color: white;
+cursor: pointer;
+transition: 0.2s ease-in-out;
+}
