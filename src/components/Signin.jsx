@@ -93,19 +93,7 @@ const Signin = () => {
                 <p className="p">Don't have an account? 
                     <Link to="/signup" className="span text-decoration-none">Sign Up</Link>
                 </p>
-                
-                <p className="p line">Or With</p>
 
-                <div className="flex-row">
-                    <button type="button" className="btn google">
-                        {/* Google SVG from your source */}
-                        Google
-                    </button>
-                    <button type="button" className="btn apple">
-                        {/* Apple SVG from your source */}
-                        Apple
-                    </button>
-                </div>
             </form>
         </div>
     );
