@@ -45,10 +45,11 @@ const Makepayment = () => {
             
             setLoading(false);
             setSuccess(response.data.message || "Request sent! Check your phone for the M-Pesa PIN prompt.");
-        } catch (err) {
+
+        } catch (error) {
             setLoading(false);
             // Handle specific Axios error messages
-            setError(err.response?.data?.message || "An error occurred. Please check your connection.");
+            setError(error.response?.data?.message || "An error occurred. Please check your connection.");
         }
     };
 

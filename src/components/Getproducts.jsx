@@ -7,6 +7,7 @@ const Getproducts = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const [search, setSearch] = useState("");
 
     const navigate = useNavigate();
     const img_url = "https://collinspaul.alwaysdata.net/static/images/";
@@ -31,6 +32,12 @@ const Getproducts = () => {
         fetchProducts();
     }, []);
 
+    // Filter based on search
+const filtered_products = products.filter((item) =>
+    item.product_name.toLowerCase().includes(search.toLowerCase()) ||
+    item.product_description.toLowerCase().includes(search.toLowerCase())
+);
+
     return (
         <div className='container-fluid px-4 py-5' style={{ backgroundColor: '#95A5A6', minHeight: '100vh' }}>
             
@@ -39,9 +46,21 @@ const Getproducts = () => {
                 <h2 className="text-uppercase fw-light mb-2" style={{ letterSpacing: '3px', color: '#1a1a1a' }}>
                     The Collection
                 </h2>
+
                 <div style={{ width: '50px', height: '1px', background: '#c5a059', margin: '0 auto' }}></div>
             </div>
 
+            <div className="row  justify-content-center mb-5">
+            <div className="col-md-8 col-md-6">
+            <input
+                className="form-control mx-auto"
+                style={{width:'60%',borderRadius: '0'}}
+                type="search"
+                placeholder="Search Products..."
+                value={search}
+                onChange={(e) => {setSearch(e.target.value);}}/>
+            </div>
+            </div>
             {/* Status Handlers */}
             {loading && <Loader />}
             
@@ -58,10 +77,11 @@ const Getproducts = () => {
                     <p className="text-muted">No pieces currently available in the collection.</p>
                 </div>
             )}
+         
 
             
             <div className="row g-4">
-                {!loading && products.map((product) => (
+                {!loading && filtered_products.map((product) => (
                     <div className="col-lg-3 col-md-6 mb-4" key={product.id}>
                         <div className="card border-0 h-100 shadow-sm" style={{ borderRadius: '0px' }}>
                             <div className="overflow-hidden" style={{ height: '300px' }}>
