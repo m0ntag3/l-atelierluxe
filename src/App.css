@@ -60,16 +60,19 @@
   height: 200px;
 }
 #entire{
-  background-color: #04291D;
+  background-image: url("/public/budge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #Nav{
-  background-color: #2C3E50;
+  background-color: #000305;
 }
 #des{
   color: #EAEAEA;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #price{
-  color: #FDF5E6;
+  color: #e0e97ded;
 }
 #title{
   font-family: 'Syne', sans-serif;
@@ -78,4 +81,28 @@
 #state{
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
+}
+#colle{
+  text-decoration: solid;
+}
+#name{
+  font-family: serif;
+}
+
+.text-gold {
+  color: #c5a059;
+  letter-spacing: 3px;
+}
+
+
+footer a:hover {
+  color: #c5a059;
+  transition: 0.3s ease;
+}
+.icons{
+  height: 50px;
+  width: 70px;
+  border-radius: 100px;
+  padding: 1px;
+  
 }

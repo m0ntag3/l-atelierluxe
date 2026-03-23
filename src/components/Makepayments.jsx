@@ -84,8 +84,8 @@ const Makepayment = () => {
                                 <h6 className="text-uppercase text-muted mb-1" style={{ letterSpacing: '2px' }}>
                                     Secure Checkout
                                 </h6>
-                                <h2 className="fw-bold mb-3">{product.product_name}</h2>
-                                <p className="text-muted mb-4">{product.product_description.slice(0,50)}...</p>
+                                <h2 className="fw-bold mb-3" id='name'>{product.product_name}</h2>
+                                <p className="text-muted mb-4" id='des'>{product.product_description.slice(0,50)}...</p>
                                 
                                 <div className="d-flex justify-content-between align-items-center mb-4 p-3 bg-light">
                                     <span className="text-dark">Total Amount</span>

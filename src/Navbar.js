@@ -13,13 +13,6 @@ return (
         </svg>
         </Link>
 
-        {/* Register Link (Search Icon) */}
-        <Link to="/" className="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="icon">
-            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" strokeLinejoin="round" strokeLinecap="round"></path>
-        </svg>
-        </Link>
-
         {/* Log In Link (Profile Icon) */}
         <Link to="/signin" className="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" className="icon">
@@ -29,10 +22,9 @@ return (
 
         {/* Add Products Link (Cart Icon) */}
         <Link to="/addproducts" className="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="icon">
-            <circle r="1" cy="21" cx="9"></circle>
-            <circle r="1" cy="21" cx="20"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" strokeLinejoin="round" strokeLinecap="round"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
         </Link>
     </div>

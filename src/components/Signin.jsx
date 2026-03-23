@@ -44,7 +44,7 @@ const Signin = () => {
                 {error && <p className="text-center small text-danger fw-bold">{error}</p>}
 
                 <div className="flex-column">
-                    <label className='text-dark'>Email</label>
+                    <label className='text-dark fw-bold'>Email</label>
                 </div>
                 <div className="inputForm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20">
@@ -63,7 +63,7 @@ const Signin = () => {
                 </div>
 
                 <div className="flex-column">
-                    <label className='text-dark'>Password</label>
+                    <label className='text-dark fw-bold'>Password</label>
                 </div>
                 <div className="inputForm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">

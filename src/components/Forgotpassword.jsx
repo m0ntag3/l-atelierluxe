@@ -16,7 +16,7 @@ const ForgotPassword = () => {
         <div className="forgot-page-container" style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
             <form className="form" onSubmit={handleReset}>
                 <div className="flex-column">
-                    <label className='text-dark'>Email address of your account*</label>
+                    <label className='text-dark fw-bold'>Account Email address</label>
                 </div>
                 <div className="inputForm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20">

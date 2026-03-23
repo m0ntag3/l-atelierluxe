@@ -53,7 +53,7 @@ const Addproducts = () => {
     return (
         <div className="d-flex justify-content-center mt-5">
             <form className="form" onSubmit={handleSubmit}>
-                <h2 className="text-center text-white mb-3 fw-bold">New Creation</h2>
+                <h2 className="text-center text-white mb-3 fw-bold">New Arrivals</h2>
 
                 {/* Status Indicators */}
                 {loading && <Loader />}
@@ -62,7 +62,7 @@ const Addproducts = () => {
 
                 {/* Product Name */}
                 <div className="flex-column">
-                    <label className='text-dark'>Creation Name</label>
+                    <label className='text-dark fw-bold'>Creation Name</label>
                 </div>
                 <div className="inputForm">
                     <input 
@@ -77,7 +77,7 @@ const Addproducts = () => {
 
                 {/* Product Description */}
                 <div className="flex-column">
-                    <label className='text-dark'>Description</label>
+                    <label className='text-dark fw-bold'>Description</label>
                 </div>
                 <div className="inputForm">
                     <input 
@@ -90,9 +90,8 @@ const Addproducts = () => {
                     />
                 </div>
 
-                {/* Product Cost */}
                 <div className="flex-column">
-                    <label className='text-dark'>Price (Ksh)</label>
+                    <label className='text-dark fw-bold'>Price (Ksh)</label>
                 </div>
                 <div className="inputForm">
                     <input 
@@ -105,9 +104,8 @@ const Addproducts = () => {
                     />
                 </div>
 
-                {/* Product Photo */}
                 <div className="flex-column">
-                    <label className='text-dark'>Creation Photo</label>
+                    <label className='text-dark fw-bold'>Creation Photo</label>
                 </div>
                 <div className="inputForm" style={{ paddingRight: '10px' }}>
                     <input 
@@ -116,7 +114,7 @@ const Addproducts = () => {
                         required 
                         accept="image/*"
                         onChange={(e) => setProductPhoto(e.target.files[0])}
-                        style={{ fontSize: '12px' }} // Makes the "Choose File" text fit better
+                        style={{ fontSize: '12px' }} 
                     />
                 </div>
 

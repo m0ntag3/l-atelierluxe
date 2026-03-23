@@ -1,11 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// 1. Import your new Navbar component
 import Navbar from './Navbar'; 
-
-// Import your other components
 import Signup from './components/Signup';
 import Signin from './components/Signin';
 import Addproducts from './components/Addproducts';
@@ -13,6 +9,7 @@ import Getproducts from './components/Getproducts';
 import Makepayment from './components/Makepayments';
 import Notfound from './components/Notfound';
 import Forgotpassword from './components/Forgotpassword';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -35,14 +32,13 @@ function App() {
             <Route path='/' element={<Getproducts />} />
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
-            <Route path="/forgotpassword" element={<Forgotpassword />} />
             <Route path='/forgot' element= {<Forgotpassword/>}/>
             <Route path='/addproducts' element={<Addproducts />} />
             <Route path='/makepayment' element={<Makepayment />} />
             <Route path='*' element={<Notfound />} />
           </Routes>
         </main>
-
+        <Footer/>
       </div>
     </Router>
   );

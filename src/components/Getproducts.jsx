@@ -39,7 +39,7 @@ const filtered_products = products.filter((item) =>
 );
 
     return (
-        <div className='container-fluid px-4 py-5' style={{ backgroundColor: '#95A5A6', minHeight: '100vh' }}>
+        <div className='container-fluid px-4 py-5' style={{ backgroundColor: '#c8c3a0', minHeight: '100vh' }}>
             
             {/* Header Section */}
             <div className="text-center mb-5">
@@ -47,7 +47,7 @@ const filtered_products = products.filter((item) =>
                     The Collection
                 </h2>
 
-                <div style={{ width: '50px', height: '1px', background: '#c5a059', margin: '0 auto' }}></div>
+                <div style={{ width: '50px', height: '10px', background: '#c5a059', margin: '0 auto' }}></div>
             </div>
 
             <div className="row  justify-content-center mb-5">
@@ -56,7 +56,7 @@ const filtered_products = products.filter((item) =>
                 className="form-control mx-auto"
                 style={{width:'60%',borderRadius: '0'}}
                 type="search"
-                placeholder="Search Products..."
+                placeholder="Search Creations..."
                 value={search}
                 onChange={(e) => {setSearch(e.target.value);}}/>
             </div>
@@ -71,13 +71,11 @@ const filtered_products = products.filter((item) =>
                 </div>
             )}
 
-            {/* Empty State */}
             {!loading && !error && products.length === 0 && (
                 <div className="text-center py-5">
                     <p className="text-muted">No pieces currently available in the collection.</p>
                 </div>
             )}
-         
 
             
             <div className="row g-4">
@@ -98,7 +96,7 @@ const filtered_products = products.filter((item) =>
                                 />
                             </div>
 
-                            <div className="card-body text-center d-flex flex-column p-4">
+                            <div className="card-body text-center d-flex flex-column p-4" id='name'>
                                 <h6 className='text-uppercase fw-bold mb-2' style={{ color: '#e6c0c0', fontSize: '0.9rem', letterSpacing: '1px' }}>
                                     {product.product_name || "Unnamed Piece"}
                                 </h6>
@@ -108,7 +106,7 @@ const filtered_products = products.filter((item) =>
                                 </p> 
 
                                 <div className="mt-auto">
-                                    <b className="mb-3 fw-light" style={{ color: '#c5a059', fontSize: '1.2rem' }}>
+                                    <b className="mb-3" style={{ color: '#c5a059', fontSize: '1.2rem' }}>
                                         KES {product.product_cost ? Number(product.product_cost).toLocaleString() : "0"}
                                     </b>
 
