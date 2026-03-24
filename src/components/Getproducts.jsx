@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
+import Mcarousel from './Mcarousel';
 
 const Getproducts = () => {
     const [products, setProducts] = useState([]);
@@ -40,6 +41,8 @@ const filtered_products = products.filter((item) =>
 
     return (
         <div className='container-fluid px-4 py-5' style={{ backgroundColor: '#c8c3a0', minHeight: '100vh' }}>
+
+            <Mcarousel />
             
             {/* Header Section */}
             <div className="text-center mb-5">
