@@ -67,14 +67,14 @@ const Makepayment = () => {
             <div className='row justify-content-center'>
                 <div className="col-lg-10">
                     <div className="card shadow-sm border-0 rounded-0 overflow-hidden">
-                        <div className="row g-0">
+                        <div className="row g-0" id='payimg'>
                             
                             
-                            <div className="col-md-6">
+                            <div className="col-md-6" id='payimg'>
                                 <img 
                                     src={img_url + product.product_photo} 
                                     alt={product.product_name} 
-                                    className='img-fluid h-100' 
+                                    className='img-fluid h-100'
                                     style={{ objectFit: 'cover', minHeight: '400px' }}
                                 />
                             </div>
