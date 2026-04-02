@@ -1,14 +1,15 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const AdminRoute = ({ user, children }) => {
-// Only allow access if user exists AND is admin
-if (user && user.is_admin === 1) {
-return children;
-} else {
-// Redirect non-admins to home
-return <Navigate to="/" />;
-}
+const AdminRoute = ({ children }) => {
+
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    // Checks if user exists and is an admin
+    if(!user || user.role !== 1){
+        return <Navigate to="/signin" replace />
+    }
+    return children;
 };
 
 export default AdminRoute;

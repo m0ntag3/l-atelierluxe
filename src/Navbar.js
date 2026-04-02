@@ -13,7 +13,7 @@ return (
     </Link>
 
     {/* Admin Add Products */}
-    {user?.is_admin === 1 && (
+    {user?.role === 1 && (
         <Link to="/addproducts" className="button ms-2">
         ➕ Add Creation
         </Link>
