@@ -33,3 +33,12 @@ background-color: rgba(255, 255, 255, 0.05);
 .icon {
 font-size: 24px;
 }
+
+.username-label{
+color: goldenrod;
+}
+
+.material-symbols-outlined {
+  font-size: 24px; /* Adjust size as needed */
+  vertical-align: middle;
+}

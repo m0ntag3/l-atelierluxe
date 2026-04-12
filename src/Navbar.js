@@ -7,15 +7,16 @@ return (
 <div className="d-flex justify-content-center my-4">
     <div className="button-container d-flex align-items-center" id="Nav">
 
-    {/* Home */}
-    <Link to="/" className="button">
-        🏠 Home
+    {/* Home Icon */}
+    <Link to="/" className="button d-flex align-items-center">
+        <span className="material-symbols-outlined">home</span>
     </Link>
 
     {/* Admin Add Products */}
     {user?.role === 1 && (
-        <Link to="/addproducts" className="button ms-2">
-        ➕ Add Creation
+        <Link to="/addproducts" className="button ms-2 d-flex align-items-center">
+        <span className="material-symbols-outlined">add_circle</span>
+        <span className="ms-1"></span>
         </Link>
     )}
 
@@ -45,12 +46,19 @@ return (
     <div className="d-flex align-items-center ms-3">
         {!user ? (
         <>
-            <Link to="/signin" className="button ms-2">Sign in</Link>
-            <Link to="/signup" className="button ms-2">Sign up</Link>
+            {/* Sign In Icon */}
+            <Link to="/signin" className="button ms-2 d-flex align-items-center" title="Sign In">
+            <span className="material-symbols-outlined">login</span>
+            </Link>
+            
+            {/* Sign Up Icon */}
+            <Link to="/signup" className="button ms-2 d-flex align-items-center" title="Sign Up">
+            <span className="material-symbols-outlined">person_add</span>
+            </Link>
         </>
         ) : (
-        <button className="button ms-2" onClick={handleLogout}>
-            Logout
+        <button className="button ms-2 d-flex align-items-center" onClick={handleLogout}>
+            <span className="material-symbols-outlined">logout</span>
         </button>
         )}
     </div>
