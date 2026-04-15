@@ -1,12 +1,12 @@
 .button-container {
 display: flex;
-  background-color: #1a1a1e; /* Matches your Luxe theme */
+  background-color: #343436; /* Matches your Luxe theme */
 width: 320px;
 height: 70px;
 align-items: center;
 justify-content: space-around;
-  border-radius: 20px; /* More rounded for Luxe feel */
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+border-radius: 20px; /* More rounded for Luxe feel */
+box-shadow: 0 10px 30px rgba(67, 65, 65, 0.5);
 border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -26,8 +26,8 @@ cursor: pointer;
 
 .button:hover {
 transform: translateY(-5px);
-  color: #D4AF37; /* Gold highlight from your Luxe theme */
-background-color: rgba(255, 255, 255, 0.05);
+color: #D4AF37; /* Gold highlight from your Luxe theme */
+background-color: rgba(81, 73, 73, 0.05);
 }
 
 .icon {

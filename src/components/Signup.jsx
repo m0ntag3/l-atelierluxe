@@ -49,6 +49,7 @@ const Signup = () => {
         } catch (error) {
             setLoading("");
             setError(error.response?.data?.message || "Registration failed. Try again!");
+            setTimeout(3000);
         }
     };
 

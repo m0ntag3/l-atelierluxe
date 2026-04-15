@@ -94,7 +94,9 @@
   letter-spacing: 3px;
 }
 
-
+.footer{
+  border-radius: 15px;
+}
 footer a:hover {
   color: #c5a059;
   transition: 0.3s ease;
@@ -114,4 +116,7 @@ footer a:hover {
 }
 #payimg{
   border-radius: 100px;
+}
+#paybut{
+  border-radius: 10px;
 }

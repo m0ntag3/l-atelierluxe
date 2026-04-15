@@ -108,7 +108,7 @@ return (
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     style={{
-                        borderRadius: "0",
+                        borderRadius: "30px",
                         border: "1px solid #999"
                     }}
                 />
@@ -123,7 +123,7 @@ return (
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     style={{
-                        borderRadius: "0",
+                        borderRadius: "30px",
                         border: "1px solid #999"
                     }}
                 >
@@ -171,7 +171,7 @@ return (
                     >
                         <div
                             className="card border-0 h-100 shadow-sm"
-                            style={{ borderRadius: "0px" }}
+                            style={{ borderRadius: "20px" }}
                         >
                             <div
                                 className="overflow-hidden"

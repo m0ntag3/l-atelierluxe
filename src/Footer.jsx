@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
 return (
-<footer className="bg-dark text-light pt-5 pb-4 mt-5" style={{ borderTop: '1px solid #c5a059' }}>
+<footer className="bg-dark text-light pt-5 pb-4 mt-5" id="footer" style={{ borderTop: '1px solid #c5a059' }}>
     <div className="container text-center text-md-left">
     <div className="row text-center text-md-left">
 
@@ -13,8 +13,7 @@ return (
             L'Atelier Luxe
         </h5>
         <p className="small">
-            Crafting timeless elegance and bespoke luxury creations since 2026. 
-            Our workshop merges traditional craftsmanship with modern design.
+            L’Atelier Luxe represents the pinnacle of bespoke craftsmanship since 2026, where the heritage of traditional artistry meets the bold vision of contemporary refinement. Functioning as a sanctuary for those who seek the extraordinary, L’Atelier Luxe prides itself on a meticulous attention to detail that transforms raw, premium materials into timeless masterpieces. 
         </p>
         </div>
 
@@ -48,7 +47,7 @@ return (
 
     </div>
 
-    <hr className="mb-4" style={{ backgroundColor: '#c5a059', opacity: '0.5' }} />
+    <hr className="mb-4" style={{ backgroundColor: '#daa84b', opacity: '0.5' }} />
 
     <div className="row align-items-center">
         <div className="col-md-7 col-lg-8 text-center text-md-start">

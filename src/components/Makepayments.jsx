@@ -95,7 +95,7 @@ const Makepayment = () => {
                                 </div>
 
                                 <form onSubmit={handleSubmit}>
-                                    <div className="mb-3">
+                                    <div className="mb-3" id='paybut'>
                                         <input 
                                             type="tel"
                                             className='form-control form-control-lg rounded-0'
