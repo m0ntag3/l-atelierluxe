@@ -8,7 +8,6 @@ const Makepayment = () => {
     const navigate = useNavigate();
     const { product } = location.state || {};
 
-    // Redirect if no product is found (e.g., on page refresh)
     useEffect(() => {
         if (!product) {
             navigate("/");
@@ -17,7 +16,6 @@ const Makepayment = () => {
 
     const img_url = "https://collinspaul.alwaysdata.net/static/images/";
 
-    // State Hooks
     const [phone, setPhone] = useState("");
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState("");
@@ -25,11 +23,22 @@ const Makepayment = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // 1. Get the "user" data from localStorage
+        const userData = localStorage.getItem('user'); 
+
+        // 2. Check if user exists. 
+        // If your "user" key stores a JSON object, we check for its existence.
+        if (!userData) {
+            alert("Please login to proceed with payment.");
+            navigate("/signin", { state: { from: location } });
+            return;
+        }
+
         setLoading(true);
         setError("");
         setSuccess("");
 
-        // Simple validation for Kenyan phone numbers
         if (!phone.startsWith("254") || phone.length !== 12) {
             setError("Please enter a valid phone number starting with 254 (12 digits).");
             setLoading(false);
@@ -41,23 +50,30 @@ const Makepayment = () => {
             formdata.append("phone", phone);
             formdata.append("amount", product.product_cost);
 
-            const response = await axios.post("https://collinspaul.alwaysdata.net/api/mpesa_payment", formdata);
+            // 3. If your backend requires a token, you might need to parse it 
+            // from the "user" object like this:
+            // const parsedUser = JSON.parse(userData);
+            // const token = parsedUser.token;
+
+            const response = await axios.post(
+                "https://collinspaul.alwaysdata.net/api/mpesa_payment", 
+                formdata
+                /* , { headers: { 'Authorization': `Bearer ${token}` } } */ 
+            );
             
             setLoading(false);
             setSuccess(response.data.message || "Request sent! Check your phone for the M-Pesa PIN prompt.");
 
         } catch (error) {
             setLoading(false);
-            // Handle specific Axios error messages
             setError(error.response?.data?.message || "An error occurred. Please check your connection.");
         }
     };
 
-    if (!product) return null; // Prevent rendering errors before redirect
+    if (!product) return null;
 
     return (
         <div className='container py-5'>
-            {/* Navigation Header */}
             <div className="d-flex align-items-center mb-4">
                 <button className="btn btn-outline-dark shadow p-4" onClick={() => navigate("/")}>
                     ← Back to Collection
@@ -67,10 +83,8 @@ const Makepayment = () => {
             <div className='row justify-content-center'>
                 <div className="col-lg-10">
                     <div className="card shadow-sm border-0 rounded-0 overflow-hidden">
-                        <div className="row g-0" id='payimg'>
-                            
-                            
-                            <div className="col-md-6" id='payimg'>
+                        <div className="row g-0">
+                            <div className="col-md-6">
                                 <img 
                                     src={img_url + product.product_photo} 
                                     alt={product.product_name} 
@@ -79,13 +93,12 @@ const Makepayment = () => {
                                 />
                             </div>
 
-                            
                             <div className="col-md-6 p-4 p-lg-5 bg-light">
                                 <h6 className="text-uppercase text-muted mb-1" style={{ letterSpacing: '2px' }}>
                                     Secure Checkout
                                 </h6>
-                                <h2 className="fw-bold mb-3" id='name'>{product.product_name}</h2>
-                                <p className="text-muted mb-4" id='des'>{product.product_description.slice(0,50)}...</p>
+                                <h2 className="fw-bold mb-3">{product.product_name}</h2>
+                                <p className="text-muted mb-4">{product.product_description.slice(0,50)}...</p>
                                 
                                 <div className="d-flex justify-content-between align-items-center mb-4 p-3 bg-light">
                                     <span className="text-dark">Total Amount</span>
@@ -95,7 +108,7 @@ const Makepayment = () => {
                                 </div>
 
                                 <form onSubmit={handleSubmit}>
-                                    <div className="mb-3" id='paybut'>
+                                    <div className="mb-3">
                                         <input 
                                             type="tel"
                                             className='form-control form-control-lg rounded-0'
@@ -104,10 +117,8 @@ const Makepayment = () => {
                                             value={phone}
                                             onChange={(e) => setPhone(e.target.value)}
                                         />
-                                        
                                     </div>
 
-                                    {/* Status Feedback */}
                                     {loading && <div className="mb-3 text-center"><Loader /></div>}
                                     {success && <div className="alert alert-success rounded-0 small">{success}</div>}
                                     {error && <div className="alert alert-danger rounded-0 small">{error}</div>}

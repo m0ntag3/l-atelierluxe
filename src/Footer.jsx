@@ -12,7 +12,7 @@ return (
         <h5 className="text-uppercase mb-4 font-weight-bold text-gold" style={{ color: '#c5a059' }}>
             L'Atelier Luxe
         </h5>
-        <p className="small">
+        <p className="small" id='details'>
             L’Atelier Luxe represents the pinnacle of bespoke craftsmanship since 2026, where the heritage of traditional artistry meets the bold vision of contemporary refinement. Functioning as a sanctuary for those who seek the extraordinary, L’Atelier Luxe prides itself on a meticulous attention to detail that transforms raw, premium materials into timeless masterpieces. 
         </p>
         </div>
