@@ -25,6 +25,7 @@ return (
             className="d-block w-100"
             alt="First slide"
             height="450px"
+            width="300px"
         />
         <div className="carousel-caption d-none d-md-block bg-dark opacity-50">
             <b className='cap'>L'atelier Luxe Lustrous Silk</b>
@@ -35,10 +36,11 @@ return (
 
         <div className="carousel-item">
         <img
-            src="img/jew2.jpg"
+            src="img/jew6.jpg"
             className="d-block w-100"
             alt="Second slide"
             height="450px"
+            width="300px"
         />
         <div className="carousel-caption d-none d-md-block bg-dark opacity-50">
             <b className='cap'>"Starlight Pavé" Domed Ring</b>
@@ -53,6 +55,7 @@ return (
             className="d-block w-100"
             alt="Third slide"
             height="450px"
+            width="300px"
         />
         <div className="carousel-caption d-none d-md-block bg-dark opacity-50">
             <b className='cap'>"Twisted Pearl" Wrap Ring</b>
