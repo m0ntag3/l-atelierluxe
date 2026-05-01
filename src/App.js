@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { TextWidget } from '@livechat/widget-react';
 
 import Navbar from './Navbar'; 
 import Signup from './components/Signup';
@@ -65,6 +66,7 @@ function App() {
         </main>
 
         <Footer/>
+        <TextWidget organizationId="358b0d53-c09e-4c31-b5ca-448a80829f74" />
       </div>
     </Router>               
   );

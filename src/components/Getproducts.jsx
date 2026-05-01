@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
 import Mcarousel from './Mcarousel';
-import { TextWidget } from '@livechat/widget-react';
+
 
 <TextWidget organizationId="358b0d53-c09e-4c31-b5ca-448a80829f74" />
 
