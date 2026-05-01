@@ -21,7 +21,6 @@ return (
         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
         <h6 className="text-uppercase mb-4 font-weight-bold">Collections</h6>
         <p><Link to="/" className="text-light text-decoration-none small">All Products</Link></p>
-        <p><Link to="/addproducts" className="text-light text-decoration-none small">New Arrivals</Link></p>
         </div>
 
         {/* Contact Info */}
