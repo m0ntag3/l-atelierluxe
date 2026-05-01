@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import Mcarousel from './Mcarousel';
 
 
-<TextWidget organizationId="358b0d53-c09e-4c31-b5ca-448a80829f74" />
 
 const Getproducts = () => {
 const [products, setProducts] = useState([]);
