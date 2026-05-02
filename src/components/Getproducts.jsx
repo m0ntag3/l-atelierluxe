@@ -4,8 +4,6 @@ import Loader from './Loader';
 import { useNavigate } from 'react-router-dom';
 import Mcarousel from './Mcarousel';
 
-
-
 const Getproducts = () => {
 const [products, setProducts] = useState([]);
 const [loading, setLoading] = useState(false);
