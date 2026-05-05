@@ -19,13 +19,13 @@ return (
 
         {/* Quick Links */}
         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 className="text-uppercase mb-4 font-weight-bold">Collections</h6>
+        <h6 className="text-uppercase mb-4 font-weight-bold text-warning">Collections</h6>
         <p><Link to="/" className="text-light text-decoration-none small">All Products</Link></p>
         </div>
 
         {/* Contact Info */}
         <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 className="text-uppercase mb-4 fw-bold">Contact</h6>
+        <h6 className="text-uppercase mb-4 fw-bold text-warning">Contact</h6>
         <p className="small"><i className="fas fa-home me-2"></i> Nairobi, KE</p>
         <p className="small"><i className="fas fa-envelope me-2"></i> contact@latelierluxe.com</p>
         <p className="small"><i className="fas fa-phone me-2"></i> +254 700 000 000</p>
@@ -33,7 +33,7 @@ return (
 
         {/* Social Media Links */}
         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 className="text-uppercase mb-4 fw-bold">Follow Us</h6>
+        <h6 className="text-uppercase mb-4 fw-bold text-warning">Follow Us</h6>
         <div className="d-flex justify-content-center justify-content-md-start gap-3">
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
             <img className='icons social-img' src="/img/ig.png" alt="Instagram" />

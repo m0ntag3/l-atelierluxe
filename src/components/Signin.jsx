@@ -83,13 +83,7 @@ return (
         />
     </div>
 
-    <div className="flex-row">
-        <div>
-        <input type="checkbox" id="remember" />
-        <label htmlFor="remember" className="ms-1">Remember me</label>
-        </div>
-        <Link to="/forgot" className='lost'>Forgot password?</Link>
-    </div>
+
 
     <button type="submit" className="button-submit">Sign In</button>
 

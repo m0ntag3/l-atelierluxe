@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Navbar.css";
 
-const Navbar = ({ user, handleLogout, defaultAvatar }) => {
+const Navbar = ({ user, handleLogout, defaultAvatar, cart = [] }) => {
+
+// Total number of items across all quantities
+const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+
 return (
 <div className="d-flex justify-content-center my-4">
     <div className="button-container d-flex align-items-center" id="Nav">
@@ -46,12 +50,9 @@ return (
     <div className="d-flex align-items-center ms-3">
         {!user ? (
         <>
-            {/* Sign In Icon */}
             <Link to="/signin" className="button ms-2 d-flex align-items-center" title="Sign In">
             <span className="material-symbols-outlined">login</span>
             </Link>
-            
-            {/* Sign Up Icon */}
             <Link to="/signup" className="button ms-2 d-flex align-items-center" title="Sign Up">
             <span className="material-symbols-outlined">person_add</span>
             </Link>
@@ -62,6 +63,7 @@ return (
         </button>
         )}
     </div>
+
     </div>
 </div>
 );
