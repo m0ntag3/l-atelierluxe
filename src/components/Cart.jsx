@@ -31,7 +31,7 @@ return (
     </h2>
 
     {cart.length === 0 ? (
-    <p className="text-center text-muted text-light">Your cart is currently empty.</p>
+    <p className="text-center" style={{ color: "#fff"}}>Your cart is currently empty.</p>
     ) : (
     <div className="row justify-content-center">
 
