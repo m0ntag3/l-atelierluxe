@@ -27,8 +27,8 @@ return (
         <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
         <h6 className="text-uppercase mb-4 fw-bold text-warning">Contact</h6>
         <p className="small"><i className="fas fa-home me-2"></i> Nairobi, KE</p>
-        <p className="small"><i className="fas fa-envelope me-2"></i> contact@latelierluxe.com</p>
-        <p className="small"><i className="fas fa-phone me-2"></i> +254 700 000 000</p>
+        <p className="small"><i className="fas fa-envelope me-2"></i> kuminacollins@gmail.com</p>
+        <p className="small"><i className="fas fa-phone me-2"></i> +254 118 140 401</p>
         </div>
 
         {/* Social Media Links */}
@@ -38,6 +38,7 @@ return (
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
             <img className='icons social-img' src="/img/ig.png" alt="Instagram" />
             </a>
+            <p>@m0ntag3e</p>
             <a href="https://x.com" target="_blank" rel="noreferrer">
             <img className='icons social-img' src="/img/x.png" alt="X (Twitter)" />
             </a>
