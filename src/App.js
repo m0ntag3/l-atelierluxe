@@ -19,7 +19,7 @@ import FloatingCart from './components/FloatingCart';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [cart, setCart] = useState([]);  // ✅ single source of truth
+  const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
     setCart((prevCart) => {
@@ -55,7 +55,7 @@ function App() {
           <img 
             src="/lebadge.jpg" 
             alt="L'Atelier Luxe Badge" 
-            className="img-fluid rounded-circle shadow" 
+            className="img-fluid rounded-circle shadow badge-animate"
             style={{ maxHeight: '300px' }} 
           />
         </header>
@@ -68,7 +68,6 @@ function App() {
             <Route path='/signin' element={<Signin setUser={setUser} />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/forgot' element={<Forgotpassword />} />
-            {/* ✅ cart and setCart passed here */}
             <Route path='/cart' element={<Cart cart={cart} setCart={setCart} />} />
 
             <Route
@@ -86,7 +85,6 @@ function App() {
         </main>
 
         <Footer />
-        {/* ✅ FloatingCart receives cart so badge stays in sync */}
         <FloatingCart cart={cart} />
         <TextWidget organizationId="358b0d53-c09e-4c31-b5ca-448a80829f74" />
 

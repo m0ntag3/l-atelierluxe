@@ -123,3 +123,51 @@ footer a:hover {
 .class{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* ── Badge animations ───────────────────────────────────────── */
+
+/* Float up and down */
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0px)   rotate(0deg); }
+  25%       { transform: translateY(-10px) rotate(1.5deg); }
+  50%       { transform: translateY(-16px) rotate(0deg); }
+  75%       { transform: translateY(-8px)  rotate(-1.5deg); }
+}
+
+/* Glow pulse on the shadow */
+@keyframes badgeGlow {
+  0%, 100% {
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.25),
+      0 0 0px  rgba(228, 189, 115, 0);
+  }
+  50% {
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.2),
+      0 0 30px rgba(228, 189, 115, 0.35);
+  }
+}
+
+/* Entrance: fade + scale in on page load */
+@keyframes badgeEntrance {
+  0%   { opacity: 0; transform: scale(0.7) translateY(30px); }
+  60%  { opacity: 1; transform: scale(1.05) translateY(-4px); }
+  100% { opacity: 1; transform: scale(1) translateY(0px); }
+}
+
+.badge-animate {
+  /* Entrance plays once on load */
+  animation:
+    badgeEntrance 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    badgeFloat    5s ease-in-out 0.9s infinite,
+    badgeGlow     5s ease-in-out 0.9s infinite;
+
+  /* Pause float on hover for a stable inspect feel */
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.badge-animate:hover {
+  animation-play-state: paused;
+  filter: brightness(1.08) drop-shadow(0 0 16px rgba(228, 189, 115, 0.5));
+}
